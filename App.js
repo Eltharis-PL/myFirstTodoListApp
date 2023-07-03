@@ -1,20 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+import backgroundStyles from './styles/backgroundStyles';
+import appTitleStyle from './styles/appTitleStyle';
+import AddTodoBar from './components/addTodoBar';
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+
+    <View style={backgroundStyles.container}>
+      {/* Main View */}
+      <View style={backgroundStyles.mainContainer}>
+        {/* Main container */}
+        <Text style={appTitleStyle.appTitle}>Todo App</Text>
+        {/* App Title */}
+        <AddTodoBar />
+        <View>
+          {/* Todo list Task*/}
+        </View>
+        <View>
+          {/* Text: numbers of taks and clar all button */}
+        </View>
+      </View>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
