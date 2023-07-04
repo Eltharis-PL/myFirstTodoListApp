@@ -1,12 +1,20 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity, TextInput } from "react-native";
 import addTodoBarStyles from "../styles/addTodoBarStyles";
+
 
 
 const AddTodoBar = () => {
     return (
         <View style={addTodoBarStyles.barContainer}>
-            <Text>Hello Rafi</Text>
+            <View style={addTodoBarStyles.userInput}>
+                <TextInput style={addTodoBarStyles.inputText} placeholder={'Add your new todo'} />
+            </View>
+            <TouchableOpacity onPress={() => { }}>
+                <View style={addTodoBarStyles.addButton}>
+                    <Text style={addTodoBarStyles.plusString}>+</Text>
+                </View>
+            </TouchableOpacity>
         </View>
 
     )

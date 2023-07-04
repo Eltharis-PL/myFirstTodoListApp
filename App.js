@@ -14,6 +14,7 @@ export default function App() {
         <Text style={appTitleStyle.appTitle}>Todo App</Text>
         {/* App Title */}
         <AddTodoBar />
+        {/* Add to do Bar */}
         <View>
           {/* Todo list Task*/}
         </View>
