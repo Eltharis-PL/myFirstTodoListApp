@@ -19,7 +19,7 @@ const addTodoBarStyles = StyleSheet.create({
         paddingLeft: 10,
     },
     inputText: {
-        fontSize: 16,
+        fontSize: 15,
     },
     addButton: {
         backgroundColor: '#814181',
@@ -31,7 +31,7 @@ const addTodoBarStyles = StyleSheet.create({
         marginLeft: 5,
     },
     plusString: {
-        fontSize: 30,
+        fontSize: 28,
         color: 'white',
     },
 });
