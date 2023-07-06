@@ -7,6 +7,7 @@ const taskStyles = StyleSheet.create({
         height: 40,
         flexDirection: 'row',
         alignItems: 'center',
+        marginBottom: 10,
 
     },
     taskOutpot: {

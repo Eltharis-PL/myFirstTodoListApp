@@ -9,8 +9,7 @@ const backgroundStyles = StyleSheet.create({
         padding: 40,
     },
     fatList: {
-        paddingTop: 30,
-
+        paddingTop: 40,
     },
 });
 

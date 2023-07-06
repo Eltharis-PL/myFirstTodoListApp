@@ -1,4 +1,4 @@
-import { Text, View, FlatList } from 'react-native';
+import { Text, View, SafeAreaView } from 'react-native';
 import backgroundStyles from './styles/backgroundStyles';
 import appTitleStyle from './styles/appTitleStyle';
 import AddTodoBar from './components/addTodoBar';
@@ -19,7 +19,7 @@ export default function App() {
 
   return (
 
-    <View style={backgroundStyles.container}>
+    <SafeAreaView style={backgroundStyles.container}>
       {/* Main View */}
       <View style={backgroundStyles.mainContainer}>
         {/* Main container */}
@@ -27,16 +27,15 @@ export default function App() {
         {/* App Title */}
         <AddTodoBar />
         {/* Add todo Bar */}
-        <FlatList style={backgroundStyles.fatList}
-          data={tasks}
-          renderItem={({ }) => <Task />}
-          contentContainerStyle={{ gap: 10 }}
-        />
+        <View style={backgroundStyles.fatList} >
+          {tasks.map(task => (<Task key={task.id} item={task} />
+          ))}
+        </View>
         <View>
           {/* Text: numbers of taks and clar all button */}
           <BottonBar />
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
