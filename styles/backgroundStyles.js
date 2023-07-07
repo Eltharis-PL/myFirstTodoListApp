@@ -7,7 +7,7 @@ const backgroundStyles = StyleSheet.create({
     mainContainer: {
         padding: 40,
     },
-    fatList: {
+    flatList: {
         paddingTop: 40,
     },
     appTitle: {

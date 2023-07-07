@@ -25,7 +25,7 @@ export default function App() {
       <View style={backgroundStyles.mainContainer}>
         <Text style={backgroundStyles.appTitle}>Todo App</Text>
         <AddTodoBar onAddTask={handleAddTask} />
-        <View style={backgroundStyles.fatList} >
+        <View style={backgroundStyles.flatList} >
           {
             taskItems.map((item, index) => {
               return (
