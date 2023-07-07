@@ -5,6 +5,7 @@ const taskStyles = StyleSheet.create({
     mainTaskView: {
         paddingTop: 20,
         height: 40,
+        width: 'auto',
         flexDirection: 'row',
         alignItems: 'center',
         marginBottom: 10,
@@ -14,9 +15,12 @@ const taskStyles = StyleSheet.create({
         backgroundColor: '#F2F2F2',
         borderRadius: 5,
         height: 40,
-        width: 308,
+        width: '100%',
         justifyContent: 'center',
         paddingLeft: 10,
+    },
+    completedTaskText: {
+        textDecorationLine: 'line-through',
     },
 });
 

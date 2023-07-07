@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { Text, View, SafeAreaView } from 'react-native';
 import backgroundStyles from './styles/backgroundStyles';
 import appTitleStyle from './styles/appTitleStyle';
@@ -8,14 +9,18 @@ import BottonBar from './components/bottonBar';
 
 export default function App() {
 
-  const tasks = [
-    { id: 1, title: 'Task 1' },
-    { id: 2, title: 'Task 2' },
-    { id: 3, title: 'Task 3' },
-    { id: 4, title: 'Task 4' },
-    { id: 5, title: 'Task 5' },
-    { id: 6, title: 'Task 6' },
-  ];
+
+  const [taskItems, setTaskItems] = useState([]);
+
+  const handleAddTask = (text) => {
+    if (text) {
+      setTaskItems([...taskItems, text]);
+    }
+  };
+
+  const handleClearTasks = () => {
+    setTaskItems([]);
+  };
 
   return (
 
@@ -25,15 +30,23 @@ export default function App() {
         {/* Main container */}
         <Text style={appTitleStyle.appTitle}>Todo App</Text>
         {/* App Title */}
-        <AddTodoBar />
+        <AddTodoBar onAddTask={handleAddTask} />
         {/* Add todo Bar */}
         <View style={backgroundStyles.fatList} >
-          {tasks.map(task => (<Task key={task.id} item={task} />
-          ))}
+          {
+            taskItems.map((item, index) => {
+              return (
+                <Task key={index} text={item} />
+              )
+            })
+          }
         </View>
         <View>
           {/* Text: numbers of taks and clar all button */}
-          <BottonBar />
+          <BottonBar
+            taskCount={taskItems.length}
+            onClearTasks={handleClearTasks}
+          />
         </View>
       </View>
     </SafeAreaView>

@@ -5,6 +5,7 @@ const addTodoBarStyles = StyleSheet.create({
     barContainer: {
         paddingTop: 45,
         height: 40,
+        width: '100%',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -14,7 +15,7 @@ const addTodoBarStyles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 5,
         height: 40,
-        width: 253,
+        width: '83%',
         justifyContent: 'center',
         paddingLeft: 10,
     },
@@ -28,7 +29,7 @@ const addTodoBarStyles = StyleSheet.create({
         borderRadius: 5,
         justifyContent: 'center',
         alignItems: 'center',
-        marginLeft: 5,
+        marginLeft: 7,
     },
     plusString: {
         fontSize: 28,

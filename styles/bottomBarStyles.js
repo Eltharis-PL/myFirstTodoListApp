@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native';
 
 const bottomBar = StyleSheet.create({
     mainContainer: {
+        width: 'auto',
         paddingTop: 30,
         flexDirection: 'row',
         alignItems: 'center',

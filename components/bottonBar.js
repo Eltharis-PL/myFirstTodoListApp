@@ -3,13 +3,15 @@ import bottomBar from "../styles/bottomBarStyles";
 import { View, Text, TouchableOpacity } from "react-native";
 
 
-const BottonBar = () => {
+const BottonBar = ({ taskCount, onClearTasks }) => {
     return (
         <View style={bottomBar.mainContainer}>
             <View>
-                <Text style={bottomBar.textStyle}>You have 4 pending tasks</Text>
+                <Text style={bottomBar.textStyle}>
+                    Complete tasks: {taskCount}
+                </Text>
             </View>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={onClearTasks} >
                 <View style={bottomBar.clearAllButton}>
                     <Text style={bottomBar.textClearAll}>Clear All</Text>
                 </View>
