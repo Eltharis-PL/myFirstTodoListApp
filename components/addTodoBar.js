@@ -48,7 +48,7 @@ const addTodoBarStyles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 5,
         height: 40,
-        width: '83%',
+        width: '81%',
         justifyContent: 'center',
         paddingLeft: 10,
     },
@@ -62,7 +62,7 @@ const addTodoBarStyles = StyleSheet.create({
         borderRadius: 5,
         justifyContent: 'center',
         alignItems: 'center',
-        marginLeft: 7,
+        marginLeft: 9,
     },
     plusString: {
         fontSize: 28,

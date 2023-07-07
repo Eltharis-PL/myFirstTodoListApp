@@ -5,6 +5,9 @@ import AddTodoBar from './components/addTodoBar';
 import Task from './components/task';
 import BottonBar from './components/bottonBar';
 
+// Mam tutaj tylko jeszcze jeden problem z stylami addTodoBar nie wiem jak dopasowac
+// caly element view aby mial 100% pokrycie w view podstawowym.
+
 export default function App() {
 
   const [taskItems, setTaskItems] = useState([]);
