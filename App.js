@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 import { Text, View, SafeAreaView } from 'react-native';
 import backgroundStyles from './styles/backgroundStyles';
-import appTitleStyle from './styles/appTitleStyle';
 import AddTodoBar from './components/addTodoBar';
 import Task from './components/task';
 import BottonBar from './components/bottonBar';
 
-
 export default function App() {
-
 
   const [taskItems, setTaskItems] = useState([]);
 
@@ -25,13 +22,9 @@ export default function App() {
   return (
 
     <SafeAreaView style={backgroundStyles.container}>
-      {/* Main View */}
       <View style={backgroundStyles.mainContainer}>
-        {/* Main container */}
-        <Text style={appTitleStyle.appTitle}>Todo App</Text>
-        {/* App Title */}
+        <Text style={backgroundStyles.appTitle}>Todo App</Text>
         <AddTodoBar onAddTask={handleAddTask} />
-        {/* Add todo Bar */}
         <View style={backgroundStyles.fatList} >
           {
             taskItems.map((item, index) => {
@@ -42,7 +35,6 @@ export default function App() {
           }
         </View>
         <View>
-          {/* Text: numbers of taks and clar all button */}
           <BottonBar
             taskCount={taskItems.length}
             onClearTasks={handleClearTasks}
