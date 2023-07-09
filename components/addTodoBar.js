@@ -36,9 +36,7 @@ export default AddTodoBar;
 
 const addTodoBarStyles = StyleSheet.create({
     barContainer: {
-        paddingTop: 45,
-        height: 40,
-        width: '100%',
+        paddingTop: 25,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -48,12 +46,12 @@ const addTodoBarStyles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 5,
         height: 40,
-        width: '81%',
+        width: '80%',
         justifyContent: 'center',
-        paddingLeft: 10,
     },
     inputText: {
         fontSize: 15,
+        paddingLeft: 10,
     },
     addButton: {
         backgroundColor: '#814181',
@@ -62,7 +60,6 @@ const addTodoBarStyles = StyleSheet.create({
         borderRadius: 5,
         justifyContent: 'center',
         alignItems: 'center',
-        marginLeft: 9,
     },
     plusString: {
         fontSize: 28,

@@ -5,9 +5,7 @@ const BottonBar = ({ taskCount, onClearTasks }) => {
     return (
         <View style={bottomBar.mainContainer}>
             <View>
-                <Text style={bottomBar.textStyle}>
-                    Complete tasks: {taskCount}
-                </Text>
+                <Text style={bottomBar.textStyle}>Number of tasks: {taskCount}</Text>
             </View>
             <TouchableOpacity onPress={onClearTasks} >
                 <View style={bottomBar.clearAllButton}>
